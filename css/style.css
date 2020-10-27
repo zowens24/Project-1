@@ -9,12 +9,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
 }
 
-.outline {
-    
-}
 
 main {
     
@@ -35,23 +31,30 @@ header {
 
 
 h1 {
-    margin-top: 20px;
+    margin-top: px;
     text-align: center;
     font-size: 50px;
     font-family: 'Vast Shadow', cursive;
     color: rgb(80, 194, 190);
     text-shadow: 5px 5px black;
     text-transform: uppercase;
+    
+    
+    padding-left:100px;
 }
 
 #title {
-  display:flex; 
+  display: flex;
   justify-content: center;
-  padding-top: 20px;
-  margin-bottom: -10px;
+  align-items: center;
+  margin-top: 20px;
+  
+ 
 }
 img {
-    margin-left: 15px;
+    
+   margin-right: 75px;
+    
 }
 header p {
     text-align: center;
@@ -137,7 +140,7 @@ header p {
  #Musical {
     font-family: 'Codystar', cursive;
     font-size: 30px;
-    font-weight: bolder;
+    font-weight: 800;
  }
 
  #Comedy {
