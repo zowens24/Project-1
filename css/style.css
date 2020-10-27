@@ -44,6 +44,15 @@ h1 {
     text-transform: uppercase;
 }
 
+#title {
+  display:flex; 
+  justify-content: center;
+  padding-top: 20px;
+  margin-bottom: -10px;
+}
+img {
+    margin-left: 15px;
+}
 header p {
     text-align: center;
     margin: 30px 0px 0px 0px;
@@ -127,7 +136,8 @@ header p {
 
  #Musical {
     font-family: 'Codystar', cursive;
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: bolder;
  }
 
  #Comedy {
