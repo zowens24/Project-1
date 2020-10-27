@@ -23,7 +23,7 @@ main {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 25% 25% 25% 25%;
-    background-color:;
+    
     
 }
 
@@ -39,8 +39,8 @@ h1 {
     text-align: center;
     font-size: 50px;
     font-family: 'Vast Shadow', cursive;
-    color: mediumturquoise;
-    text-shadow: 3px 3px grey;
+    color: rgb(80, 194, 190);
+    text-shadow: 5px 5px black;
     text-transform: uppercase;
 }
 
@@ -85,6 +85,7 @@ header p {
      text-transform: uppercase;
     box-shadow: 2px 5px grey;
      font-family: courier ;
+     background-color: white;
  }
 
  button:hover {
