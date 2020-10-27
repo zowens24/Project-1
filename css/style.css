@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&family=Petit+Formal+Script&family=Crafty+Girls&family=Poor+Story&family=Orbitron&family=Jolly+Lodger&family=Coiny&family=Codystar&family=Bungee+Shade&family=Jacques+Francois+Shadow&family=Nosifer&family=Dancing+Script:wght@600&family=Press+Start+2P&family=Jolly+Lodger&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,14 +23,14 @@ main {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 25% 25% 25% 25%;
-    background-color: aqua;
+    background-color:;
     
 }
 
 header {
-    margin: 0px 0px 0px 0px;
-    background-color: black;
-    color: white;
+    
+    background-image: linear-gradient(rgba(128, 128, 128, 0.913), white);
+    
 }
 
 
@@ -36,34 +38,36 @@ h1 {
     margin-top: 20px;
     text-align: center;
     font-size: 50px;
+    font-family: 'Vast Shadow', cursive;
+    color: mediumturquoise;
+    text-shadow: 3px 3px grey;
+    text-transform: uppercase;
 }
 
 header p {
     text-align: center;
     margin: 30px 0px 0px 0px;
     padding: 10px 100px 10px 100px;
-    border-top: 1px solid pink;
+    border-top: 3px dotted black;
     font-weight: 100;
     line-height: 2;
     font-size: 22px;
-    font-family: arial;
+    font-family: courier;
 
 }
 
 .genre {
    display: flex;
    flex-direction: column;
-    border: 3px dotted black;
+    border: 5px dotted black;
     text-align: center;
     justify-content: space-between;
     padding: 50px 30px 50px 30px;
     margin: 15px;
     box-shadow: 5px 5px grey;
     border-radius: 10px;
-    font-family: helvetica;
-    font-size: 25px;
-    background-color: pink;
-    color: white;
+    background-color: rgb(83, 202, 198);
+    color: black;
     
 }
  section p {
@@ -73,17 +77,85 @@ header p {
  }
  
  button {
-    padding: 40px 0px 40px 0px;
+    padding: 30px 0px 30px 0px;
      border-radius: 50%;
      margin: 0px 40px 0px 40px;
-     font-size: 15px;
+     font-size: 20px;
      outline: none;
-     transition: box-shadow .3s;
      text-transform: uppercase;
+    box-shadow: 2px 5px grey;
+     font-family: courier ;
  }
 
  button:hover {
-     
-     
-     box-shadow: 5px 5px grey;
+     background-color: gainsboro;
  }
+
+ button:active {
+    box-shadow: 0px 0px #666;
+    transform: translateY(4px);
+ }
+
+ #Romance {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+ }
+
+ #Animation {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    line-height: 1.4;
+    
+ }
+
+ #Horror {
+    font-family: 'Nosifer', cursive;
+    font-size: 25px;
+ }
+
+ #Romantic-Comedy {
+    font-family: 'Jacques Francois Shadow', cursive;
+    font-size: 33px;
+ }
+
+ #Action {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 29px;
+    line-height: 1.3;
+ }
+
+ #Musical {
+    font-family: 'Codystar', cursive;
+    font-size: 35px;
+ }
+
+ #Comedy {
+    font-family: 'Coiny', cursive;
+    font-size: 35px;
+ }
+
+ #Thriller {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 40px;
+ }
+
+ #Sci-fi {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+ } 
+
+ #Documentary {
+    font-family: 'Poor Story', cursive;
+    font-size:40px;
+ }
+
+ #Drama {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 30px;
+ }
+
+ #Random {
+    font-family: 'Crafty Girls', cursive;
+    font-size: 35px;
+ }
+
