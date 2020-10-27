@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&family=Petit+Formal+Script&family=Crafty+Girls&family=Poor+Story&family=Orbitron&family=Jolly+Lodger&family=Coiny&family=Codystar&family=Bungee+Shade&family=Jacques+Francois+Shadow&family=Nosifer&family=Dancing+Script:wght@600&family=Press+Start+2P&family=Jolly+Lodger&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Vast+Shadow&family=Petit+Formal+Script&family=Crafty+Girls&family=Poor+Story&family=Orbitron&family=Jolly+Lodger&family=Coiny&family=Codystar&family=Bungee+Shade&family=Jacques+Francois+Shadow&family=Nosifer&family=Dancing+Script:wght@600&family=Press+Start+2P&family=Jolly+Lodger&display=swap');
 
 * {
     box-sizing: border-box;
@@ -31,41 +31,34 @@ header {
 
 
 h1 {
-    margin-top: px;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Vast Shadow', cursive;
-    color: rgb(80, 194, 190);
-    text-shadow: 5px 5px black;
-    text-transform: uppercase;
-    
-    
-    padding-left:100px;
+    font-size: 80px;
+    font-family: 'Hi Melody', cursive;
+    color: black;
+    text-shadow: 4px 4px lightblue;
 }
 
 #title {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
   
- 
 }
+
 img {
-    
-   margin-right: 75px;
-    
+   margin-left: 10px;
 }
+
 header p {
     text-align: center;
     margin: 30px 0px 0px 0px;
     padding: 10px 100px 10px 100px;
     border-top: 3px dotted black;
-    font-weight: 100;
+    font-weight: bolder;
     line-height: 2;
-    font-size: 22px;
+    font-size: 23px;
     font-family: courier;
-
+    border-top: 10px dotted black;
 }
 
 .genre {
@@ -78,7 +71,7 @@ header p {
     margin: 15px;
     box-shadow: 5px 5px grey;
     border-radius: 10px;
-    background-color: rgb(83, 202, 198);
+    background-color: lightblue;
     color: black;
     
 }
