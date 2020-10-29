@@ -48,7 +48,7 @@ const rand_rand_movie = RAND_URL[(Math.random() * RAND_URL.length) | 0]
 
 
 // State Data
-let RomanceMovieData;
+let romanceMovieData;
 
 // Cached Element References 
 const $romance = $('#romance');
@@ -63,20 +63,24 @@ const $thriller = $('#thriller');
 const $horror = $('#horror');
 const $romcom = $('#romcom');
 const $random = $('#random');
+const $modal = $('#modal');
 // Attached Event Listeners
 $romance.on('click', handleClick);
 // Functions
 function handleClick() {
     //fetch data using AJAX 
+    
     const rand_ro_movie = RO_URL[(Math.random() * RO_URL.length) | 0]
     
     $.ajax(rand_ro_movie).then(function (data) {
         // take the returned data and assign it to a global vairable
-        
-        RomanceMovieData = data;
+        romanceMovieData = data;
+        //call render and tell the function that it needs to display a modal
+       render(true);
        console.log(data);
         //call render to visualize it to the DOM
         //render();
+
     }, function (error) {
         console.log('error: ', error);
     });
@@ -85,11 +89,25 @@ function handleClick() {
 
 
 
-function render() {
+
     //map over the objects inside of the movieData results array
-    // dynamically generate html for each element in the array
+    // dynamically generate html for each element in the arraymodal(handleClick);
     //add that html to our collection elememt
-    const html = RomanceMovieData.results.map(movie => {
-      return 
-    })
-}
+    //const html = RomanceMovieData.results.map(movie => {
+    function render(showModal) {
+     if(showModal === true) {
+         //show modal 
+         //generate the html for the inner content for the modal
+         //call the modal function on the modal element
+         const $modalContent = $(`
+            <img src="${romanceMovieData.Poster}"/>
+            <h5>${romanceMovieData.Title}</h5>
+            <p>Plot: ${romanceMovieData.Plot} </p>
+            
+         `);
+         const $modal = $('#moviemodal')
+         $modal.html($modalContent)
+         $modal.modal();
+     } 
+     // return 
+    }
