@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Vast+Shadow&family=Petit+Formal+Script&family=Crafty+Girls&family=Poor+Story&family=Orbitron&family=Jolly+Lodger&family=Coiny&family=Codystar&family=Bungee+Shade&family=Jacques+Francois+Shadow&family=Nosifer&family=Dancing+Script:wght@600&family=Press+Start+2P&family=Jolly+Lodger&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hi+Melody&family=Vast+Shadow&family=Petit+Formal+Script&family=Crafty+Girls&family=Poor+Story&family=Orbitron&family=Jolly+Lodger&family=Coiny&family=Codystar&family=Bungee+Shade&family=Nosifer&family=Dancing+Script:wght@600&family=Press+Start+2P&family=Jolly+Lodger&display=swap');
 
 * {
     box-sizing: border-box;
@@ -9,33 +9,38 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 
 main {
     
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 25% 25% 25% 25%;
-    
+    background-color: white;
     
 }
 
 header {
-    
-    background-image: linear-gradient(lightblue, white);
-    
+   
+   
 }
 
 
 h1 {
-    font-size: 80px;
+    font-size: 84px;
     font-family: 'Hi Melody', cursive;
     color: black;
-    text-shadow: 4px 4px grey;
+    text-shadow: -1px 5px 5px black, 5px 1px 5px #000, 1px -1px 5px #000, -1px -1px 5px #000;
     text-align: center;
+    
+    color:lightgrey;
+    margin: ;
+    
+    
 }
 
 #title {
@@ -43,6 +48,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  
   
 }
 
@@ -53,43 +59,61 @@ img {
 header p {
     text-align: center;
     margin: 30px 0px 0px 0px;
-    padding: 10px 100px 10px 100px;
-    border-top: 3px dotted black;
+    padding: 10px 150px 10px 150px;
     font-weight: bolder;
     line-height: 2;
-    font-size: 23px;
+    font-size: 25px;
     font-family: courier;
-    border-top: 10px dotted black;
+    border-top: 15px dotted black;
+   
+    color: black;
+    
 }
 
 .genre {
    display: flex;
    flex-direction: column;
-    border: 5px dotted black;
-    justify-content:space-evenly;
+    border: 7px dotted black;
+    justify-content:space-between;
     align-items:center;
     margin: 15px;
-    box-shadow: 5px 5px grey;
+    box-shadow: 7px 7px 15px 3px black;
     border-radius: 15px;
-    background-color: lightblue;
+    background-color: white;
     color: black;
-    max-width: 100vh;
     text-align: center;
+    padding-bottom:10px;
+    padding-top: 5px;
+    
+    
 }
  
  button {
+   
      border-radius: 50px;
       padding: 5px 10px 5px 10px;
      font-size: 20px;
      outline: none;
      text-transform: uppercase;
-    box-shadow: 2px 5px grey;
+    box-shadow: 5px 5px 5px 0px black;
      font-family: courier ;
      background-color: white;
+     font-weight: bold;
+     border: 1px solid black;
+     text-align: center;
+     margin: 0px 0px 0px 0px;
+    
  }
 
  button:hover {
-     background-color: gainsboro;
+     background-color:;
+     color:;
+     text-shadow: -1px 1px 0 black, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+     font-weight: lighter;
+     font-size:24px;
+     box-shadow: 7px 7px 7px 0 black;
+    
+    
  }
 
  button:active {
@@ -99,68 +123,141 @@ header p {
 
  #Romance {
     font-family: 'Dancing Script', cursive;
-    font-size: 40px;
+    font-size: 50px;
+    color:white;
+    background-color: pink;
+    text-shadow: -1px 1px 0 black, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
  }
+ #romance:hover {
+   color: pink;
+   text-shadow: -1px 1px 0 black, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+ }
+ 
 
  #Animation {
     font-family: 'Press Start 2P', cursive;
-    font-size:20px;
-    line-height:;
-    text-align:center;
-    
+    font-size:25px;
+    line-height: 1.3;
+   background-color: lightblue;
+   color: white;
+   text-shadow: -1px 1px 0 black, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  }  
+ 
+ #animation:hover{
+    color: lightblue;
  }
 
  #Horror {
     font-family: 'Nosifer', cursive;
     font-size:30px;
-    line-height: ;
+    background-color: darkred;
+    color: white;
+    text-shadow: -1px 1px 0 black, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+ }
+ #horror:hover {
+    color: rgb(184, 55, 55);
  }
 
  #Romantic-Comedy {
-    font-family: 'Jacques Francois Shadow', cursive;
-    font-size: 30px;
+   font-family: 'Abril Fatface', cursive;
+    font-size: 35px;
+    background-color: rgba(255, 217, 0, 0.94);
+    color: white;
+    text-shadow: -1px 1px 0 black, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    line-height: 1;
  }
+ #romcom:hover {
+    color:rgba(255, 217, 0, 0.94);
+}
 
  #Action {
     font-family: 'Bungee Shade', cursive;
-    font-size: 26px;
-    line-height:;
+    font-size: 30px;
+    background-color: darkcyan;
+    color: white;
+    
+ }
+ #action:hover {
+    color: rgb(72, 173, 173);
+    
  }
 
  #Musical {
     font-family: 'Codystar', cursive;
     font-size:33px;
     font-weight:bolder;
+    background-color: mediumpurple ;
+    color: white;
+ }
+ #musical:hover {
+    color: rgb(161, 130, 223);
  }
 
  #Comedy {
     font-family: 'Coiny', cursive;
     font-size:35px;
+    background-color: rgb(253, 156, 104);
+    color:white;
+    text-shadow: -1px 1px 0 black, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+ }
+ #comedy:hover {
+    color: rgb(253, 156, 104);
  }
 
  #Thriller {
     font-family: 'Jolly Lodger', cursive;
-    font-size: 35px;
+    font-size: 43px;
+    background-color: rgba(25, 25, 112, 0.92);
+    color: white;
+    line-height: .9;
+    padding: 5px 10px 5px 10px;
+   
  }
-
+ #thriller:hover {
+    color:rgb(57, 57, 167);
+ }
+ 
  #Sci-fi {
     font-family: 'Orbitron', sans-serif;
-    font-size:21.5px;
+    font-size:28px;
     font-weight: bolder;
+    background-color:DarkSeaGreen;
+    color: white;
+    text-shadow: -1px 1px 0 black, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
  } 
+ #scifi:hover {
+    color:darkseagreen;
+ }
 
  #Documentary {
     font-family: 'Poor Story', cursive;
-    font-size:40px;
+    font-size:45px;
+    background-color: olivedrab;
+    color: white;
+ }
+ #doc:hover {
+    color: olivedrab;
  }
 
  #Drama {
     font-family: 'Petit Formal Script', cursive;
-    font-size: 30px;
+    font-size: 35px;
+    background-color: indianred;
+    color: white;
+   
  }
 
+ #drama:hover {
+    color:indianred;
+ }
  #Random {
     font-family: 'Crafty Girls', cursive;
-    font-size: 32px;
+    font-size: 35px;
+    background-color: dimgrey;
+    color: white;
+   
+ }
+ #random:hover {
+    color:dimgrey;
  }
 
