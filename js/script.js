@@ -4,10 +4,10 @@
 
 // Constant Data
 //romance movies
-const RO_URL = ['http://www.omdbapi.com/?apikey=364a927d&t=titanic&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=the+notebook&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=ghost&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=call+me+by+your+name&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=casablanca&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=moonstruck&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=dirty+dancing&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=a+star+is+born&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=love+basketball&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=brokeback+mountain&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=an+officer+and+a+gentleman&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=roman+holiday&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=love+story&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=gone+with+the+wind&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=carol&plot=full']
+const RO_URL = ['https://www.omdbapi.com/?apikey=364a927d&t=titanic&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=the+notebook&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=ghost&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=call+me+by+your+name&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=casablanca&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=moonstruck&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=dirty+dancing&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=a+star+is+born&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=brokeback+mountain&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=an+officer+and+a+gentleman&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=roman+holiday&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=love+story&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=gone+with+the+wind&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=carol&plot=full']
 
 //comedy movies
-const CO_URL = ['http://www.omdbapi.com/?apikey=364a927d&t=the+big+lebowski&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=step+brothers&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=big&plot=full']
+const CO_URL = []
 //const rand_co_movie = CO_URL[(Math.random() * CO_URL.length) | 0]
 //action movies
 const AC_URL = []
@@ -60,7 +60,7 @@ const $random = $('#random');
 
 // Attached Event Listeners
 $romance.on('click', handleClickR);
-$comedy.on('click', handleClickC);
+
 // Functions
 function handleClickR() {
     //fetch data using AJAX 
