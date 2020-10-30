@@ -7,8 +7,8 @@
 const RO_URL = ['http://www.omdbapi.com/?apikey=364a927d&t=titanic&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=the+notebook&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=ghost&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=call+me+by+your+name&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=casablanca&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=moonstruck&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=dirty+dancing&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=a+star+is+born&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=love+basketball&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=brokeback+mountain&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=an+officer+and+a+gentleman&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=roman+holiday&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=love+story&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=gone+with+the+wind&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=carol&plot=full']
 
 //comedy movies
-const CO_URL = []
-const rand_co_movie = CO_URL[(Math.random() * CO_URL.length) | 0]
+const CO_URL = ['http://www.omdbapi.com/?apikey=364a927d&t=the+big+lebowski&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=step+brothers&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=big&plot=full']
+//const rand_co_movie = CO_URL[(Math.random() * CO_URL.length) | 0]
 //action movies
 const AC_URL = []
 const rand_ac_movie = AC_URL[(Math.random() * AC_URL.length) | 0]
@@ -42,7 +42,7 @@ const rand_rand_movie = RAND_URL[(Math.random() * RAND_URL.length) | 0]
 
 // State Data
 let romanceMovieData;
-
+let comedyMovieData;
 // Cached Element References 
 const $romance = $('#romance');
 const $comedy = $('#comedy');
@@ -56,12 +56,13 @@ const $thriller = $('#thriller');
 const $horror = $('#horror');
 const $romcom = $('#romcom');
 const $random = $('#random');
-const $modal = $('#modal');
-// Attached Event Listeners
-$romance.on('click', handleClick);
 
+
+// Attached Event Listeners
+$romance.on('click', handleClickR);
+$comedy.on('click', handleClickC);
 // Functions
-function handleClick() {
+function handleClickR() {
     //fetch data using AJAX 
     
     const rand_ro_movie = RO_URL[(Math.random() * RO_URL.length) | 0]
@@ -78,15 +79,14 @@ function handleClick() {
     }, function (error) {
         console.log('error: ', error);
     });
-
 }
 
-    function render(showModal) {
-     if(showModal === true) {
+    function render(showRomanceModal) {
+     if(showRomanceModal === true) {
          //show modal 
          //generate the html for the inner content for the modal
          //call the modal function on the modal element
-         const $modalContent = $(`<h5>${romanceMovieData.Title}</h5><br>
+         const $RoModalContent = $(`<h5>${romanceMovieData.Title}</h5><br>
             <img src="${romanceMovieData.Poster}"/><br>
             <p>Year: ${romanceMovieData.Year} </p><br>
             <p>Rated: ${romanceMovieData.Rated} </p><br>
@@ -95,8 +95,10 @@ function handleClick() {
             <p>Writer: ${romanceMovieData.Writer} </p><br>
             <p>Actors: ${romanceMovieData.Actors} </p><br>
             <p>Plot: ${romanceMovieData.Plot} </p>`);
-         const $modal = $('#moviemodal')
-         $modal.html($modalContent)
-         $modal.modal();
+         const $RoModal = $('#moviemodalR')
+         $RoModal.html($RoModalContent)
+         $RoModal.modal();
      }  
+     
     }
+    

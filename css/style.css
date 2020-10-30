@@ -261,12 +261,12 @@ header p {
     color:dimgrey;
  }
 
-#moviemodal h5{
+.modal h5{
    text-transform: uppercase;
    font-size: 15px;
    text-decoration: underline;
 }
-#moviemodal {
+.modal {
    text-align: left;
    
 }
