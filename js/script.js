@@ -4,10 +4,8 @@
 
 // Constant Data
 //romance movies
-const RO_URL = ['http://www.omdbapi.com/?apikey=364a927d&t=titanic', 'http://www.omdbapi.com/?apikey=364a927d&t=the+notebook', 'http://www.omdbapi.com/?apikey=364a927d&t=ghost', 'http://www.omdbapi.com/?apikey=364a927d&t=call+me+by+your+name', 'http://www.omdbapi.com/?apikey=364a927d&t=casablanca', 'http://www.omdbapi.com/?apikey=364a927d&t=moonstruck', 'http://www.omdbapi.com/?apikey=364a927d&t=dirty+dancing', 'http://www.omdbapi.com/?apikey=364a927d&t=a+star+is+born', 'http://www.omdbapi.com/?apikey=364a927d&t=love+basketball', 'http://www.omdbapi.com/?apikey=364a927d&t=brokeback+mountain', 'http://www.omdbapi.com/?apikey=364a927d&t=an+officer+and+a+gentleman', 'http://www.omdbapi.com/?apikey=364a927d&t=roman+holiday', 'http://www.omdbapi.com/?apikey=364a927d&t=love+story', 'http://www.omdbapi.com/?apikey=364a927d&t=gone+with+the+wind', 'http://www.omdbapi.com/?apikey=364a927d&t=carol']
+const RO_URL = ['http://www.omdbapi.com/?apikey=364a927d&t=titanic&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=the+notebook&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=ghost&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=call+me+by+your+name&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=casablanca&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=moonstruck&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=dirty+dancing&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=a+star+is+born&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=love+basketball&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=brokeback+mountain&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=an+officer+and+a+gentleman&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=roman+holiday&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=love+story&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=gone+with+the+wind&plot=full', 'http://www.omdbapi.com/?apikey=364a927d&t=carol&plot=full']
 
-//const rand_ro_movie = RO_URL[(Math.random() * RO_URL.length) | 0]
-//console.log(rand_ro_movie);
 //comedy movies
 const CO_URL = []
 const rand_co_movie = CO_URL[(Math.random() * CO_URL.length) | 0]
@@ -42,11 +40,6 @@ const rand_roco_movie = ROCO_URL[(Math.random() * ROCO_URL.length) | 0]
 const RAND_URL = []
 const rand_rand_movie = RAND_URL[(Math.random() * RAND_URL.length) | 0]
 
-
-
-
-
-
 // State Data
 let romanceMovieData;
 
@@ -66,6 +59,7 @@ const $random = $('#random');
 const $modal = $('#modal');
 // Attached Event Listeners
 $romance.on('click', handleClick);
+
 // Functions
 function handleClick() {
     //fetch data using AJAX 
@@ -87,27 +81,22 @@ function handleClick() {
 
 }
 
-
-
-
-    //map over the objects inside of the movieData results array
-    // dynamically generate html for each element in the arraymodal(handleClick);
-    //add that html to our collection elememt
-    //const html = RomanceMovieData.results.map(movie => {
     function render(showModal) {
      if(showModal === true) {
          //show modal 
          //generate the html for the inner content for the modal
          //call the modal function on the modal element
-         const $modalContent = $(`
-            <img src="${romanceMovieData.Poster}"/>
-            <h5>${romanceMovieData.Title}</h5>
-            <p>Plot: ${romanceMovieData.Plot} </p>
-            
-         `);
+         const $modalContent = $(`<h5>${romanceMovieData.Title}</h5><br>
+            <img src="${romanceMovieData.Poster}"/><br>
+            <p>Year: ${romanceMovieData.Year} </p><br>
+            <p>Rated: ${romanceMovieData.Rated} </p><br>
+            <p>Runtime: ${romanceMovieData.Runtime} </p><br>
+            <p>Director: ${romanceMovieData.Director} </p><br>
+            <p>Writer: ${romanceMovieData.Writer} </p><br>
+            <p>Actors: ${romanceMovieData.Actors} </p><br>
+            <p>Plot: ${romanceMovieData.Plot} </p>`);
          const $modal = $('#moviemodal')
          $modal.html($modalContent)
          $modal.modal();
-     } 
-     // return 
+     }  
     }

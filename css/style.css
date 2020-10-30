@@ -261,3 +261,12 @@ header p {
     color:dimgrey;
  }
 
+#moviemodal h5{
+   text-transform: uppercase;
+   font-size: 15px;
+   text-decoration: underline;
+}
+#moviemodal {
+   text-align: left;
+   
+}
