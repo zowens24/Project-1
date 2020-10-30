@@ -12,3 +12,7 @@ First dev project! For those nights, when you don't want to spend more time pick
 - I drew out my wireframe by hand, though I ended up changing the layout multiple times. 
 
 ### Deploy here https://zowens24.github.io/
+
+### Future:
+- Fix CSS to allow for differenct screen sizes
+- Add movies to other genres and create functionality
