@@ -4,17 +4,19 @@
 
 // Constant Data
 //romance movies
-const RO_URL = ['https://www.omdbapi.com/?apikey=364a927d&t=titanic&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=the+notebook&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=ghost&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=call+me+by+your+name&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=casablanca&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=moonstruck&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=dirty+dancing&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=a+star+is+born&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=brokeback+mountain&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=an+officer+and+a+gentleman&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=roman+holiday&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=love+story&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=gone+with+the+wind&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=carol&plot=full']
 
+const RO_URL = ['https://www.omdbapi.com/?apikey=364a927d&t=titanic&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=the+notebook&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=ghost&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=call+me+by+your+name&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=casablanca&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=moonstruck&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=dirty+dancing&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=a+star+is+born&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=brokeback+mountain&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=an+officer+and+a+gentleman&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=roman+holiday&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=love+story&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=gone+with+the+wind&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=carol&plot=full']
+//let rand_ro_movie = RO_URL[(Math.random() * RO_URL.length) | 0]
 //comedy movies
-const CO_URL = ['https://www.omdbapi.com/?apikey=364a927d&t=the+big+lebowski&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=some+like+it+hot&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=this+is+spinal+tap&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=airplane&plot=full']
+const CO_URL = ['https://www.omdbapi.com/?apikey=364a927d&t=the+big+lebowski&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=some+like+it+hot&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=this+is+spinal+tap&plot=full']
 
 //action movies
 const AC_URL = []
 const rand_ac_movie = AC_URL[(Math.random() * AC_URL.length) | 0]
 //scifi movies 
-const SCI_URL = []
+const SCI_URL = ['https://www.omdbapi.com/?apikey=364a927d&t=the+matrix&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=avatar&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=star+wars&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=blade+runner&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=alien&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=a+space+odyssey&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=star+wars+the+empire+strikes+back&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=back+to+the+future&plot=full', 'https://www.omdbapi.com/?apikey=364a927d&t=et%3A+the+extra+terrestrial&plot=full']
 const rand_sci_movie = SCI_URL[(Math.random() * SCI_URL.length) | 0]
+
 //musicals
 const MUS_URL = []
 const rand_mus_movie = MUS_URL[(Math.random() * MUS_URL.length) | 0]
@@ -66,9 +68,9 @@ $comedy.on('click', handleClickC)
 function handleClickR() {
     //fetch data using AJAX 
     
-    const rand_ro_movie = RO_URL[(Math.random() * RO_URL.length) | 0]
     
-    $.ajax(rand_ro_movie).then(function (data) {
+    
+    $.ajax(RO_URL[(Math.random() * RO_URL.length) | 0]).then(function (data) {
         // take the returned data and assign it to a global vairable
         romanceMovieData = data;
         //call render and tell the function that it needs to display a modal
