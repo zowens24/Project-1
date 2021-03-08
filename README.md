@@ -1,6 +1,6 @@
 # Project 1- Movie Night
 
-First dev project! For those nights, when you don't want to spend more time picking a movie than actually watching one, I have created a movie generator that will randomly chose a movie from one of the 11 movie genres to choose from. If you can't choose one of the genres, there is also a random option! Made for movie nights to be spent the right way, enjoying watching the movies!
+First dev project! For those nights when you don't want to spend more time picking a movie than actually watching one, I have created a movie generator that will randomly chose a movie from one of the 11 movie genres available. If you can't decide on a genre, a random option also exists! This is made for movie nights to be spent the right way - watching and enjoying the movies!
 
 ## Technologies Used
 - HTML5
